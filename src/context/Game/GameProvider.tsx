@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import { GameContext, INITIAL_STATE } from './GameContext';
-import { gameReducer } from './gameReducer';
+import { gameReducer } from './GameReducer';
 
 interface Props {
   children: JSX.Element | JSX.Element[];

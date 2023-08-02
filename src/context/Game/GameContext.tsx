@@ -21,9 +21,9 @@ export type Action =
  * Interface for game context state
  */
 export interface GameContextState {
-  cards: Card[];
-  selectedCards: Card[];
-  invisibleCards: Card[];
+  cards: Card[]; // All cards
+  selectedCards: Card[]; // Selected cards pass to invisible cards if they are the same
+  invisibleCards: Card[]; // If the are same to 'cards', means that you are win
 
   dispatch: Dispatch<Action>;
 }
