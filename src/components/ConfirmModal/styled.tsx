@@ -1,5 +1,5 @@
-import { Container } from '@/styled-components/Container.styled';
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
+import { Container } from "../shared/Container";
 
 /**
  * Container for confirm modal

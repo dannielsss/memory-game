@@ -1,6 +1,6 @@
-import React, { useEffect, useReducer } from 'react';
-import { GameContext, INITIAL_STATE } from './GameContext';
-import { gameReducer } from './GameReducer';
+import React, { useEffect, useReducer } from "react";
+import { GameContext, INITIAL_STATE } from "./GameContext";
+import { gameReducer } from "./gameReducer";
 
 interface Props {
   children: JSX.Element | JSX.Element[];
@@ -16,7 +16,7 @@ const GameProvider: React.FC<Props> = ({ children }) => {
 
   // Made a new game
   useEffect(() => {
-    dispatch({ type: 'RESET_GAME' });
+    dispatch({ type: "RESET_GAME" });
   }, []);
 
   // Manage status of selected cards
@@ -25,14 +25,14 @@ const GameProvider: React.FC<Props> = ({ children }) => {
       // Check if they are not the same
       if (state.selectedCards[0].name !== state.selectedCards[1].name) {
         setTimeout(() => {
-          dispatch({ type: 'CLEAN_SELECTED_CARDS' });
+          dispatch({ type: "CLEAN_SELECTED_CARDS" });
         }, CARD_TIMEOUT);
         return;
       }
 
       // Delete selected cards because they are the same
       setTimeout(() => {
-        dispatch({ type: 'SET_CARDS_INVISIBLE' });
+        dispatch({ type: "SET_CARDS_INVISIBLE" });
       }, CARD_TIMEOUT);
     }
   }, [state.selectedCards]);

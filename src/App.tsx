@@ -1,7 +1,6 @@
-import React from 'react';
-import { Container } from './styled-components/Container.styled';
-import GameProvider from './context/Game/GameProvider';
-import GameTable from './components/GameTable';
+import GameProvider from "./context/Game/GameProvider";
+import GameTable from "./components/GameTable";
+import { Container } from "./components/shared/Container";
 
 /**
  * Main component

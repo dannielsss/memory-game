@@ -1,18 +1,24 @@
-import { Container } from '@/styled-components/Container.styled';
-import styled from 'styled-components';
+import styled from "styled-components";
+import { Container } from "../shared/Container";
 
 /**
  * Container for game table
  */
 export const GameTableContainer = styled(Container)`
-  width: 30%;
+  width: 80%;
   margin: auto;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
 `;
 
 /**
  * Header for game table
  */
-export const GameTableHeader = styled.header`
+export const GameTableHeaderStyled = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -21,6 +27,12 @@ export const GameTableHeader = styled.header`
 
   font-size: 1.5em;
   font-weight: bold;
+
+  & .btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 `;
 
 /**
