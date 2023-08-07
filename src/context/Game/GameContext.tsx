@@ -1,12 +1,12 @@
-import { Dispatch, createContext } from "react";
+import { Dispatch, createContext } from 'react';
 
 export type TypeGameCard =
-  | "ball"
-  | "book"
-  | "car"
-  | "guitar"
-  | "phone"
-  | "tv"
+  | 'ball'
+  | 'book'
+  | 'car'
+  | 'guitar'
+  | 'phone'
+  | 'tv'
   | string;
 
 /**
@@ -21,10 +21,10 @@ export interface Card {
  * Actions for reducer
  */
 export type Action =
-  | { type: "RESET_GAME" }
-  | { type: "SELECT_CARD"; payload: Card }
-  | { type: "CLEAN_SELECTED_CARDS" }
-  | { type: "SET_CARDS_INVISIBLE" };
+  | { type: 'RESET_GAME' }
+  | { type: 'SELECT_CARD'; payload: Card }
+  | { type: 'CLEAN_SELECTED_CARDS' }
+  | { type: 'SET_CARDS_INVISIBLE' };
 
 /**
  * Interface for game context state
@@ -42,23 +42,23 @@ export interface GameContextState {
  */
 export const INITIAL_STATE: GameContextState = {
   cards: [
-    { name: "ball", id: 1 },
-    { name: "ball", id: 2 },
-    { name: "car", id: 3 },
-    { name: "car", id: 4 },
-    { name: "phone", id: 5 },
-    { name: "phone", id: 6 },
-    { name: "tv", id: 7 },
-    { name: "tv", id: 8 },
-    { name: "guitar", id: 9 },
-    { name: "guitar", id: 10 },
-    { name: "book", id: 11 },
-    { name: "book", id: 12 },
+    { name: 'ball', id: 1 },
+    { name: 'ball', id: 2 },
+    { name: 'car', id: 3 },
+    { name: 'car', id: 4 },
+    { name: 'phone', id: 5 },
+    { name: 'phone', id: 6 },
+    { name: 'tv', id: 7 },
+    { name: 'tv', id: 8 },
+    { name: 'guitar', id: 9 },
+    { name: 'guitar', id: 10 },
+    { name: 'book', id: 11 },
+    { name: 'book', id: 12 },
   ],
   selectedCards: [],
   invisibleCards: [],
 
-  dispatch: () => {},
+  dispatch: () => null,
 };
 
 /**

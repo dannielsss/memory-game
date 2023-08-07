@@ -1,7 +1,7 @@
-import { GameCardsGrid, GameTableContainer } from "./styled";
-import GameCard from "./GameCard";
-import useCards from "@/hooks/useCards";
-import GameTableHeader from "./GameTableHeader";
+import { GameCardsGrid, GameTableContainer } from './styled';
+import GameCard from './GameCard';
+import useCards from '@/hooks/useCards';
+import GameTableHeader from './GameTableHeader';
 
 /**
  * Table containing the memory game

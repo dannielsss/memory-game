@@ -1,8 +1,8 @@
-import { FC, useState } from "react";
-import GameIcon from "@/components/shared/GameIcon";
-import { GameTableHeaderStyled } from "./styled";
-import useTimer from "@/hooks/useTimer";
-import ConfirmModal from "../ConfirmModal";
+import { FC, useState } from 'react';
+import GameIcon from '@/components/shared/GameIcon';
+import { GameTableHeaderStyled } from './styled';
+import useTimer from '@/hooks/useTimer';
+import ConfirmModal from '../ConfirmModal';
 
 interface GameTableHeaderProps {
   resetCards: () => void;
