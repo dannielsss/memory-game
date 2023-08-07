@@ -1,7 +1,7 @@
-import { styled } from 'styled-components';
+import { styled } from "styled-components";
 
 interface ButtonProps {
-  variant: 'primary' | 'secondary';
+  variant: "primary" | "secondary";
   width: string;
 }
 
@@ -10,16 +10,21 @@ interface ButtonProps {
  */
 export const Button = styled.button<ButtonProps>`
   background: ${(props) =>
-    (props.variant === 'primary' && '#ffffff') ||
-    (props.variant === 'secondary' && '#000000')};
+    (props.variant === "primary" && "#ffffff") ||
+    (props.variant === "secondary" && "#000000")};
   color: ${(props) =>
-    (props.variant === 'primary' && '#000000') ||
-    (props.variant === 'secondary' && '#ffffff')};
+    (props.variant === "primary" && "#000000") ||
+    (props.variant === "secondary" && "#ffffff")};
   border: ${(props) =>
-    (props.variant === 'primary' && '1px solid #000000') ||
-    (props.variant === 'secondary' && 'none')};
+    (props.variant === "primary" && "1px solid #000000") ||
+    (props.variant === "secondary" && "none")};
 
   width: ${(props) => props.width};
   padding: 0.5rem;
   border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  &:active {
+    transform: scale(0.95);
+  }
 `;
